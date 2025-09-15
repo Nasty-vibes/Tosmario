@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tosmario Security - Services</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    /* Navbar */
+    nav {
+      background: #003366;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    nav .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .nav-links a.active {
+      text-decoration: underline;
+    }
+
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+      display: none;
+      font-size: 26px;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* Services Section */
+    .services {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 120px 60px 60px;
+      gap: 40px;
+      background: #f8f9fa;
+      flex-wrap: wrap;
+    }
+
+    .services-content {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .services-content h1 {
+      font-size: 2rem;
+      color: #003366;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .services-content p {
+      font-size: 1.1rem;
+      color: #444;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .service-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .service-box {
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .service-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .service-box i {
+      font-size: 40px;
+      color: #007bff;
+      margin-bottom: 15px;
+    }
+
+    .service-box h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .service-box p {
+      font-size: 0.95rem;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    .services-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      min-width: 280px;
+    }
+
+    .services-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    }
+
+    /* Back Button */
+    .back-btn {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .back-btn a {
+      display: inline-block;
+      background: #003366;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .back-btn a:hover {
+      background: #002147;
+    }
+
+    /* WhatsApp Floating Button */
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: #fff;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+      background-color: #20b358;
+      transform: scale(1.1);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #111;
+        width: 200px;
+        display: none;
+        padding: 15px;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .services {
+        flex-direction: column;
+        padding: 100px 20px 40px;
+        text-align: center;
+      }
+
+      .services-image {
+        margin-top: 30px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .services-content h1 {
+        font-size: 1.5rem;
+      }
+      .services-content p {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">Tosmario</div>
+    <div class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')">
+      ☰
+    </div>
+    <div class="nav-links">
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="about.html"><i class="fas fa-bullseye"></i> About Us</a>
+      <a href="services.html" class="active"><i class="fas fa-shield-halved"></i> Services</a>
+    </div>
+  </nav>
+
+  <!-- Services Section -->
+  <section class="services">
+    <div class="services-content">
+      <h1>Our Security Services</h1>
+      <p>We provide top-class security solutions to ensure safety, protection, and peace of mind.</p>
+
+      <div class="service-container">
+        <div class="service-box">
+          <i class="fa-solid fa-user-shield"></i>
+          <h3>Personal Security</h3>
+          <p>Trained bodyguards and escorts to ensure your safety wherever you go.</p>
+        </div>
+        <div class="service-box">
+          <i class="fa-solid fa-building-shield"></i>
+          <h3>Corporate Security</h3>
+          <p>Protecting businesses, employees, and assets with advanced measures.</p>
+        </div>
+        <div class="service-box">
+          <i class="fa-solid fa-people-group"></i>
+          <h3>Event Security</h3>
+          <p>From concerts to private events, we provide crowd management and supervision.</p>
+        </div>
+        <div class="service-box">
+          <i class="fa-solid fa-video"></i>
+          <h3>CCTV Monitoring</h3>
+          <p>24/7 surveillance systems with live monitoring for maximum protection.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="services-image">
+      <img src="img/ChatGPT Image Sep 13, 2025, 09_12_37 PM.png" alt="Tosmario Security" />
+    </div>
+  </section>
+
+  <div class="back-btn">
+    <a href="index.html"><i class="fas fa-arrow-left"></i> Go Back</a>
+  </div>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/+17188735995" class="whatsapp-float" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+</body>
+</html>

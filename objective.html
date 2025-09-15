@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Tosmario - Objectives & More</title>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f8f9fa;
+      color: #333;
+    }
+
+    /* Navbar */
+    nav {
+      background: #003366;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    nav .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .nav-links a.active {
+      text-decoration: underline;
+    }
+
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+      display: none;
+      font-size: 26px;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* Container */
+    .container {
+      max-width: 900px;
+      margin: 120px auto;
+      padding: 20px;
+    }
+
+    .section {
+      background: white;
+      padding: 25px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .section h2 {
+      color: #003366;
+      margin-bottom: 10px;
+    }
+
+    .section p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .back-home {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #003366;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #002147;
+    }
+
+    /* WhatsApp Floating Button */
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: #fff;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+      background-color: #20b358;
+      transform: scale(1.1);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #111;
+        width: 200px;
+        display: none;
+        padding: 15px;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1, h2, p {
+        font-size: 14px;
+      }
+      .btn {
+        padding: 8px 15px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">Tosmario</div>
+    <div class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')">
+      ☰
+    </div>
+    <div class="nav-links">
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="objective.html" class="active"><i class="fas fa-bullseye"></i> Objectives</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- Objective Section -->
+    <section class="section">
+      <h2><i class="fas fa-bullseye"></i> Our Objective</h2>
+      <p>
+        At Tosmario Security, our objective is to establish a strong reputation 
+        for excellence, trust, and professionalism. We aim to create secure 
+        environments for our clients while improving our methods, technologies, 
+        and staff training.
+      </p>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="section">
+      <h2><i class="fas fa-flag"></i> Our Mission</h2>
+      <p>
+        Our mission is to provide our clientele with superior service that is in line 
+        with their needs and requirements. Tosmario seeks to ensure safety at all times 
+        while upholding dignity and respect.
+      </p>
+    </section>
+
+    <!-- Compliance Section -->
+    <section class="section">
+      <h2><i class="fas fa-gavel"></i> Compliance</h2>
+      <p>
+        We strictly adhere to safety rules and compliance guidelines. 
+        Tosmario ensures all guards are trained in health and safety, 
+        first aid, and venue-specific regulations.
+      </p>
+    </section>
+
+    <!-- Customer Satisfaction Section -->
+    <section class="section">
+      <h2><i class="fas fa-smile"></i> Customer Satisfaction</h2>
+      <p>
+        Customer satisfaction is our ultimate priority. 
+        We guarantee professional service delivery, 
+        swift conflict resolution, and round-the-clock client support.
+      </p>
+    </section>
+
+    <div class="back-home">
+      <a href="index.html" class="btn">⬅ Back to Home</a>
+    </div>
+  </main>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/+17188735995" class="whatsapp-float" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+</body>
+</html>
