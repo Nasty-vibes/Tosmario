@@ -52,9 +52,11 @@
     /* Hamburger */
     
     .menu-toggle {
-      display:none; 
-      font-size:22px; 
-      cursor:pointer;
+      display: none;
+      font-size: 28px;
+      color: white;
+      cursor: pointer;
+    }
     /* Hero Section */
     .hero-section {
       display: flex;
@@ -176,10 +178,13 @@
 
     /* Responsive */
     @media (max-width: 768px) {
-      .menu-toggle {
-        display: block;
-      }
-      .nav-links {
+          .menu-toggle {
+      display:none; 
+      font-size:22px; 
+      cursor:pointer;
+    }
+    @media (max-width: 768px) {
+      .nav-links  {
         display:none;
         flex-direction:column;
         position:absolute;
@@ -189,9 +194,9 @@
         width:200px;
         padding:10px;
       }
-      .nav-links.show {
-        display: flex;
-      }
+      .nav-links .show { display:flex; }
+      .menu-toggle { display:block; color:white; }
+    }
       .hero-section {
         flex-direction: column;
         text-align: center;
