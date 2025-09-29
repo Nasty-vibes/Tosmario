@@ -183,20 +183,24 @@
       font-size:22px; 
       cursor:pointer;
     }
+   /* Responsive */
     @media (max-width: 768px) {
-      .nav-links  {
-        display:none;
-        flex-direction:column;
-        position:absolute;
-        top:60px;
-        right:0;
-        background:#0d2433;
-        width:200px;
-        padding:10px;
+      .menu-toggle {
+        display: block;
       }
-      .nav-links .show { display:flex; }
-      .menu-toggle { display:block; color:white; }
-    }
+      .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: #003366;
+        padding: 20px;
+        border-radius: 8px;
+        display: none;
+      }
+      .nav-links.show {
+        display: flex;
+      }
       .hero-section {
         flex-direction: column;
         text-align: center;
@@ -287,5 +291,6 @@
   </footer>
 </body>
 </html>
+
 
 
