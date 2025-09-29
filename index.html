@@ -49,14 +49,14 @@
       color: #f39c12;
     }
 
-    /* Hamburger */
-    
+    /* Hamburger menu (hidden on desktop by default) */
     .menu-toggle {
       display: none;
       font-size: 28px;
       color: white;
       cursor: pointer;
     }
+
     /* Hero Section */
     .hero-section {
       display: flex;
@@ -96,13 +96,15 @@
       font-size: 16px;
     }
 
-    /* Sections */
+    /* Header */
     header {
       background: #002147;
       color: white;
       padding: 40px 20px;
       text-align: center;
     }
+
+    /* Services Section */
     section {
       padding: 40px;
       text-align: center;
@@ -176,17 +178,10 @@
       transform: scale(1.1);
     }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-          .menu-toggle {
-      display:none; 
-      font-size:22px; 
-      cursor:pointer;
-    }
-   /* Responsive */
+    /* Responsive - Mobile */
     @media (max-width: 768px) {
       .menu-toggle {
-        display: block;
+        display: block; /* Show hamburger on mobile */
       }
       .nav-links {
         flex-direction: column;
@@ -212,7 +207,6 @@
   </style>
 </head>
 <body>
-  <h1 style="color:red;">TEST TEXT</h1>
 
   <!-- Navigation -->
   <nav>
@@ -277,7 +271,7 @@
     <p><i class="fa-brands fa-instagram"></i> <a href="https://instagram.com/tosmario_sec" target="_blank">@tosmario_sec</a></p>
     <p><i class="fa-brands fa-facebook"></i> <a href="https://facebook.com/tosmariosecurity" target="_blank">Tosmario Security</a></p>
     <p><i class="fa-solid fa-phone"></i> +2348034693194</p>
-    <p><i class="fa-solid fa-phone"></i>+17188735995</p>
+    <p><i class="fa-solid fa-phone"></i> +17188735995</p>
   </section>
 
   <!-- WhatsApp Floating Button -->
@@ -291,6 +285,3 @@
   </footer>
 </body>
 </html>
-
-
-
